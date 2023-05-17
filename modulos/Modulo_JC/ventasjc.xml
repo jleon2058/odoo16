@@ -1,0 +1,53 @@
+<odoo>
+    <record id="views_tree_ventasjc" model="ir.ui.view">
+        <field name="name">view.tree.ventasjc</field>
+        <field name="model">ventasjc</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="cod_venta"/>
+                <field name="cliente_venta"/>
+                <field name="condicion_pago_cliente"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="views_form_ventasjc" model="ir.ui.view">
+        <field name="name">view.form.ventasjc</field>
+        <field name="model">ventasjc</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="cod_venta"/>
+                        <field name="cliente_venta"/>
+                        <field name="condicion_pago_cliente"/>
+                        <field name="tag_id" widget="many2many_tags"/>
+                        <field name="producto_linea_id">
+                            <tree editable="bottom">
+                                <field name="product_id"/>
+                                <field name="price_unit"/>
+                                <field name="qty"/>
+                                <field name="lineatotal" sum="monto_total"/>
+                            </tree>
+                            <form>
+                                <field name="product_id"/>
+                                <field name="price_unit"/>
+                                <field name="qty"/>
+                                <field name="lineatotal"/>
+                            </form>                 
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_views_ventasjc" model="ir.actions.act_window">
+        <field name="name">Ventas</field>
+        <field name="res_model">ventasjc</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_ventasjc" parent="" action="Modulo_JC.action_views_ventasjc"/>
+
+</odoo>

@@ -1,0 +1,74 @@
+<odoo>
+    <data>
+        <template id="report_ventajc_template">
+            <t t-call="web.html_container">
+                <t  t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="header">
+                            Mi Empresa - Logo
+                        </div>
+                        <link rel="stylesheet" type="text/css" href="/Modulo_JC/static/src/css/estilojc.css"/>
+                        <div class="page">
+                            <h1 style="text-align: center;font-size: 36px">Reporte</h1>
+                            <p style="text-align: center">Reporte personalidado en Odoo</p>
+                            <p>Vendedor: <span t-field="o.tag_id"/></p>
+                            <p>Codigo de Venta: <span t-field="o.cod_venta"/></p>
+                            <p>Cliente: <span t-field="o.cliente_venta"/></p>
+                            <p>Condicion de pago: <span t-field="o.condicion_pago_cliente"/></p>
+                            <p>
+                                <table class="table table-bordered">
+                                    <thead class="back_ground_head">
+                                        <tr>
+                                            <th colspan="4">
+                                                Registros
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="1">Nombre Producto:</th>
+                                            <th colspan="1">Precio Unitario:</th>
+                                            <th colspan="1">Cantidad:</th>
+                                            <th colspan="1">Total:</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="back_ground_body">
+                                        <t t-foreach="o.producto_linea_id" t-as="n">
+                                            <tr class="text-center">
+                                                <td><span t-field="n.product_id"/></td>
+                                                <td><span t-field="n.price_unit"/></td>
+                                                <td><span t-field="n.qty"/></td>
+                                                <td><span t-field="n.lineatotal"/></td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                    <tfoot class="back_ground_foot">
+                                        <tr>
+                                            <th colspan="3">Total</th>
+                                            <th colspan="1">
+                                                <t t-set="sum_row" t-value="0"/>
+                                                <t t-foreach="o.producto_linea_id" t-as="line">
+                                                    <t t-set="sum_row" t-value="sum_row+line.lineatotal"/>
+                                                </t>
+                                                <t t-esc="sum_row"/>
+                                            </th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </p>
+                        </div>
+                        <div class="footer">
+                            <small>Mi footer</small>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+        <report
+            id="action_report_ventasjc"
+            string="Reporte Personalizado"
+            model="ventasjc"
+            report_type="qweb-pdf"
+            name="Modulo_JC.report_ventajc_template"    
+            file="Modulo_JC.report_ventajc_template"
+        />
+    </data>
+</odoo>

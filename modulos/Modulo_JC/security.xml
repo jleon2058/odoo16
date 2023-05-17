@@ -1,0 +1,64 @@
+<odoo>
+    <record id="model_acces_condicionpagojc" model="ir.model.access">
+        <field name="name">model.access.condicionpagojc</field>
+        <field name="model_id" ref="Modulo_JC.model_condicionpagojc"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="model_acces_productojc" model="ir.model.access">
+        <field name="name">model.access.productojc</field>
+        <field name="model_id" ref="Modulo_JC.model_productojc"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="model_acces_empleadojc" model="ir.model.access">
+        <field name="name">model.access.empleadojc</field>
+        <field name="model_id" ref="Modulo_JC.model_empleadojc"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="model_acces_clientejc" model="ir.model.access">
+        <field name="name">model.access.clientejc</field>
+        <field name="model_id" ref="Modulo_JC.model_clientejc"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="model_acces_ventasjc" model="ir.model.access">
+        <field name="name">model.access.ventasjc</field>
+        <field name="model_id" ref="Modulo_JC.model_ventasjc"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="model_acces_lineaventajc" model="ir.model.access">
+        <field name="name">model.access.lineaventajc</field>
+        <field name="model_id" ref="Modulo_JC.model_lineaventajc"/>
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>    
+</odoo>
+
+
+

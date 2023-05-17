@@ -1,0 +1,43 @@
+<odoo>
+    <record id="views_tree_productojc" model="ir.ui.view">
+        <field name="name">view.tree.productojc</field>
+        <field name="model">productojc</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="cod_product"/>
+                <field name="name"/>
+                <field name="precio_product"/>
+                <field name="estado_product"/>
+                <field name="category_product"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="views_form_productojc" model="ir.ui.view">
+        <field name="name">view.form.productojc</field>
+        <field name="model">productojc</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="cod_product"/>
+                        <field name="name"/>
+                        <field name="precio_product"/>
+                        <field name="estado_product"/>
+                        <field name="category_product"/>
+                        <field name="tipo_product"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_views_productojc" model="ir.actions.act_window">
+        <field name="name">Producto</field>
+        <field name="res_model">productojc</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_productojc" parent="" action="Modulo_JC.action_views_productojc"/>
+
+</odoo>

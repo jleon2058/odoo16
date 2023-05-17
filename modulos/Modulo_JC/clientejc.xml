@@ -1,0 +1,38 @@
+<odoo>
+    <record id="views_tree_clientejc" model="ir.ui.view">
+        <field name="name">view.tree.clientejc</field>
+        <field name="model">clientejc</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="cod_cliente"/>
+                <field name="name"/>
+                <field name="condicion_pago_cliente"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="views_form_clientejc" model="ir.ui.view">
+        <field name="name">view.form.clientejc</field>
+        <field name="model">clientejc</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="cod_cliente"/>
+                        <field name="name"/>
+                        <field name="condicion_pago_cliente"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_views_clientejc" model="ir.actions.act_window">
+        <field name="name">Clientes</field>
+        <field name="res_model">clientejc</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_clientejc" parent="" action="Modulo_JC.action_views_clientejc"/>
+
+</odoo>

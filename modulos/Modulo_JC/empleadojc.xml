@@ -1,0 +1,36 @@
+<odoo>
+    <record id="views_tree_empleadojc" model="ir.ui.view">
+        <field name="name">view.tree.empleadojc</field>
+        <field name="model">empleadojc</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="cod_empleadojc"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="views_form_clientejc" model="ir.ui.view">
+        <field name="name">view.form.empleadojc</field>
+        <field name="model">empleadojc</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="cod_empleadojc"/>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_views_empleadojc" model="ir.actions.act_window">
+        <field name="name">Empleados</field>
+        <field name="res_model">empleadojc</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_empleadojc" parent="" action="Modulo_JC.action_views_empleadojc"/>
+
+</odoo>

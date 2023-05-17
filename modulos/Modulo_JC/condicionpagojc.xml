@@ -1,0 +1,38 @@
+<odoo>
+    <record id="views_tree_condicionpagojc" model="ir.ui.view">
+        <field name="name">view.tree.condicionpagojc</field>
+        <field name="model">condicionpagojc</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="cod_cond_pago"/>
+                <field name="name"/>
+                <field name="tipo_cond_pago"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="views_form_condicionpagojc" model="ir.ui.view">
+        <field name="name">view.form.condicionpagojc</field>
+        <field name="model">condicionpagojc</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="cod_cond_pago"/>
+                        <field name="name"/>
+                        <field name="tipo_cond_pago"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_views_condicionpagojc" model="ir.actions.act_window">
+        <field name="name">Condicion de Pago</field>
+        <field name="res_model">condicionpagojc</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_condicionpagojc" parent="" action="Modulo_JC.action_views_condicionpagojc"/>
+
+</odoo>
