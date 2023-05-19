@@ -5,4 +5,3 @@ class Ventaheredado(models.Model):
     
     confirmed_user_id=fields.Many2one('res.users',string="Usuario Confirmado")
     approved_user_id=fields.Many2one('res.users',string="Usuario Aprobado")
-    create_user_id=fields.Many2one('res.users',string="Usuario Aprobado")
