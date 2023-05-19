@@ -19,7 +19,7 @@
                                 <table class="table table-bordered">
                                     <thead class="back_ground_head">
                                         <tr>
-                                            <th colspan="4">
+                                            <th colspan="4" class="letrathead">
                                                 Registros
                                             </th>
                                         </tr>
