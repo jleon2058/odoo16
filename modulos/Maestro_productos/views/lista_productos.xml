@@ -8,8 +8,11 @@
                     <xpath expr="//field[@name='default_code']" position="after">
                         <field name="status_product"/>
                     </xpath>
-                    <xpath expr="//field[@name='default_code']" position="after">
-                        <field name="status_product"/>
+                    <xpath expr="//field[@name='barcode']" position="after">
+                        <field name="category_product"/>
+                    </xpath>
+                    <xpath expr="//field[@name='default_code']" position="attributes">
+                        <attribute name='required'>True</attribute>
                     </xpath>
             </field>
         </record>
